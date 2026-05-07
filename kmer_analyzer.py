@@ -37,19 +37,18 @@ def count_kmers_with_context(sequence, k):
 
 def write_results_to_file(kmer_data, output_filename):
     sorted_kmers = sorted(kmer_data.keys())
-    
+
     with open(output_filename, 'w') as f:
         for kmer in sorted_kmers:
-            total_counts = kmer_data[kmer]['count']
+            total_count = kmer_data[kmer]['count']
             next_chars = kmer_data[kmer]['next_chars']
-            
+
             next_char_str = " ".join(
-                f"{char}:{freq}" 
+                f"{char}:{freq}"
                 for char, freq in sorted(next_chars.items())
             )
-            
-            f.write(f"{kmer} {total_count} {next_char_str}\n")
 
+            f.write(f"{kmer} {total_count} {next_char_str}\n")
 
 def main():
     sequence_file = sys.argv[1]
