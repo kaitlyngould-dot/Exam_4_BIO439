@@ -40,6 +40,7 @@ def write_results_to_file(kmer_data, output_filename):
     
     with open(output_filename, 'w') as f:
         for kmer in sorted_kmers:
+            total_counts = kmer_data[kmer]['count']
             next_chars = kmer_data[kmer]['next_chars']
             
             next_char_str = " ".join(
@@ -47,7 +48,7 @@ def write_results_to_file(kmer_data, output_filename):
                 for char, freq in sorted(next_chars.items())
             )
             
-            f.write(f"{kmer} {next_char_str}\n")
+            f.write(f"{kmer} {total_count} {next_char_str}\n")
 
 
 def main():
