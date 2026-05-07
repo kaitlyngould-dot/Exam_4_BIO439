@@ -1,6 +1,8 @@
 #This is the sample code from Exam 4
 import sys
 
+#This section checks whether a DNA sequence is valid based on specified parameters before the code is run and analyzed
+01~
 def validate_sequence(sequence, k):
     if len(sequence) < k:
         return False
@@ -9,6 +11,7 @@ def validate_sequence(sequence, k):
             return False
     return True
 
+##dictionary storing kmer and character frequencies##
 def update_kmer_count(kmer_data, kmer, next_char):
     if kmer not in kmer_data:
         kmer_data[kmer] = {
@@ -23,6 +26,8 @@ def update_kmer_count(kmer_data, kmer, next_char):
 
     return kmer_data
 
+##checks the kmers and finds the character after each one then counts the frequencies##
+
 def count_kmers_with_context(sequence, k):
     kmer_data = {}
     
@@ -34,6 +39,7 @@ def count_kmers_with_context(sequence, k):
     
     return kmer_data
 
+##results from running test are put into an output text file##
 
 def write_results_to_file(kmer_data, output_filename):
     sorted_kmers = sorted(kmer_data.keys())
