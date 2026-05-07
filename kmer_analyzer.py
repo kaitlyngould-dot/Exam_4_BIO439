@@ -4,6 +4,8 @@ import sys
 #This section checks whether a DNA sequence is valid based on specified parameters before the code is run and analyzed
 
 def validate_sequence(sequence, k):
+    sequence = sequence.upper() #This allows for lowercase DNA to be counted
+
     if len(sequence) < k:
         return False
     for nucleotide in sequence:
