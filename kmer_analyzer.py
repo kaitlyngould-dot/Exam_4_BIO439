@@ -2,7 +2,7 @@
 import sys
 
 #This section checks whether a DNA sequence is valid based on specified parameters before the code is run and analyzed
-01~
+
 def validate_sequence(sequence, k):
     if len(sequence) < k:
         return False
