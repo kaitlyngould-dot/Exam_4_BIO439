@@ -1,5 +1,6 @@
-AT 2 C:1 G:1
-CG 1 A:1
-GA 2 T:2
-TC 1 G:1
-TG 1 A:1
+ATC 1 G:1
+ATG 1 A:1
+CGA 1 T:1
+GAT 1 C:1
+TCG 1 A:1
+TGA 1 T:1
